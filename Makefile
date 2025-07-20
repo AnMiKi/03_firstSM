@@ -2,11 +2,15 @@ MCU = atmega328p
 F_CPU = 16000000UL
 CC = avr-gcc
 OBJCOPY = avr-objcopy
-CFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os
+CFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -I00_avr-libs-uart
+SRC = src/main.c 00_avr-libs-uart/uart.c
 
 TARGET = main
-PORT = COM3       # ⚠️ Change this to match your Arduino COM port
+PORT = COM3
 BAUD = 115200
+
+main.elf: $(SRC)
+	avr-gcc $(CFLAGS) -o $@ $^
 
 all: $(TARGET).hex
 
