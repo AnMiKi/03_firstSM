@@ -3,7 +3,7 @@ F_CPU = 16000000UL
 CC = avr-gcc
 OBJCOPY = avr-objcopy
 CFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -I00_avr-libs-uart
-SRC = src/main.c 00_avr-libs-uart/uart.c
+SRC = main.c 00_avr-libs-uart/uart.c
 
 TARGET = main
 PORT = COM3

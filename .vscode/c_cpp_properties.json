@@ -4,7 +4,8 @@
       "name": "AVR",
       "includePath": [
         "C:/msys64/mingw64/avr/include",
-        "C:/msys64/mingw64/lib/gcc/avr/*/include"
+        "C:/msys64/mingw64/lib/gcc/avr/*/include",
+        "C:/Users/andi_/CProjects/03_firstSM/00_avr-libs-uart"
       ],
       "defines": [
         "F_CPU=16000000UL",
